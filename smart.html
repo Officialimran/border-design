@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart-Lab Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+    <style>
+      .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      }
+      .clip-inverted-diagonal {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white dark:bg-gray-800 shadow">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <img src="logo.png" alt="Logo" class="h-8" />
+        <nav class="hidden md:flex space-x-6 items-center">
+          <a href="#about" class="hover:text-orange-500">About Us</a>
+          <a href="#capabilities" class="hover:text-orange-500">Capabilities</a>
+          <a href="#industries" class="hover:text-orange-500">Industries</a>
+          <a href="#insights" class="hover:text-orange-500">Insights</a>
+          <a href="#careers" class="hover:text-orange-500">Careers</a>
+          <a href="#contact" class="hover:text-orange-500">Contact</a>
+          <button id="darkToggle" class="px-2 py-1 border rounded dark:border-white">🌙</button>
+          <button id="searchToggle" class="ml-2 text-xl">🔍</button>
+        </nav>
+        <button id="menuToggle" class="md:hidden text-2xl">☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-gray-800 hidden z-50 p-6">
+      <div class="flex justify-between items-center">
+        <span class="text-xl font-bold">Menu</span>
+        <button id="closeMenu" class="text-2xl">×</button>
+      </div>
+      <nav class="mt-6 flex flex-col space-y-4">
+        <a href="#about">About Us</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#industries">Industries</a>
+        <a href="#insights">Insights</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center">
+      <input type="text" placeholder="Search..." class="w-1/2 p-4 rounded text-black" />
+      <button id="closeSearch" class="absolute top-4 right-4 text-white text-2xl">×</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+      <img src="hero-bg.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+      <div class="relative z-20 max-w-2xl px-4 text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Sprint to <span class="text-orange-400">Scale</span></h1>
+        <p class="mb-6">Committed to shaping the future of business, driving rapid transformation with lasting innovation and robust growth.</p>
+        <button class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded">Explore Our Services</button>
+      </div>
+      <!-- Diagonal Shape -->
+      <div class="absolute bottom-0 w-full h-48 bg-white clip-diagonal z-10"></div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="bg-white text-center py-16">
+      <h2 class="text-3xl font-semibold mb-8">Capabilities</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+        <div class="bg-gray-100 p-4 rounded">Item 1</div>
+        <div class="bg-gray-100 p-4 rounded">Item 2</div>
+        <div class="bg-gray-100 p-4 rounded">Item 3</div>
+        <div class="bg-gray-100 p-4 rounded">Item 4</div>
+      </div>
+    </section>
+
+<!-- Custom CSS for Diagonal Effect -->
+<style>
+  .clip-diagonal {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .clip-diagonal {
+      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+</style>
+
+    <section class="relative w-full overflow-hidden">
+  <div class="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-20 lg:py-32 z-10">
+    
+    <!-- Left Text Content -->
+    <div class="w-full md:w-1/2 z-20">
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-800">
+        Sprint to Scale<br />
+        <span class="text-orange-600">with Smart-Lab Global</span>
+      </h2>
+      <ul class="mt-6 space-y-3 text-gray-600 text-lg leading-relaxed">
+        <li>• We don’t just keep up with change — we drive it forward, fearlessly.</li>
+        <li>• From complexity to clarity — we power the journey of transformation.</li>
+        <li>• At the core of every breakthrough: bold thinking and trusted execution.</li>
+        <li>• Technology is built around people. Progress is designed around you.</li>
+      </ul>
+      <p class="mt-4 text-gray-700 text-lg">Turn ideas into impact across industries and borders.</p>
+      <a href="#"
+        class="mt-6 inline-block px-6 py-3 bg-gray-900 text-white font-semibold text-sm rounded-full shadow hover:bg-gray-800 transition">
+        Meet Smart-Lab Global
+      </a>
+    </div>
+
+    <!-- Right Image with Diagonal Cut -->
+    <div class="w-full md:w-1/2 relative mt-12 md:mt-0">
+      <div class="absolute inset-0 clip-diagonal z-0">
+        <img src="shape1.jpg" alt="Highway" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full bg-white overflow-hidden">
+  <div class="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-20 lg:py-32 z-10">
+    
+    <!-- Left Text Content -->
+    <div class="w-full md:w-1/2 z-20">
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-800">
+        Sprint to Scale<br />
+        <span class="text-orange-600">with Smart-Lab Global</span>
+      </h2>
+      <ul class="mt-6 space-y-3 text-gray-600 text-lg leading-relaxed">
+        <li>• We don’t just keep up with change — we drive it forward, fearlessly.</li>
+        <li>• From complexity to clarity — we power the journey of transformation.</li>
+        <li>• At the core of every breakthrough: bold thinking and trusted execution.</li>
+        <li>• Technology is built around people. Progress is designed around you.</li>
+      </ul>
+      <p class="mt-4 text-gray-700 text-lg">Turn ideas into impact across industries and borders.</p>
+      <a href="#"
+        class="mt-6 inline-block px-6 py-3 bg-gray-900 text-white font-semibold text-sm rounded-full shadow hover:bg-gray-800 transition">
+        Meet Smart-Lab Global
+      </a>
+    </div>
+
+    <!-- Right Image with Diagonal Cut -->
+    <div class="w-full md:w-1/2 relative mt-12 md:mt-0">
+      <div class="absolute inset-0 clip-diagonal z-0">
+        <img src="/path-to-your-image.jpg" alt="Highway" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for Diagonal Effect -->
+<style>
+  .clip-diagonal {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .clip-diagonal {
+      clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+</style>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 text-center">
+      <p>&copy; 2025 Smart-Lab Global. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+      // Dark Mode Toggle
+      const darkToggle = document.getElementById('darkToggle');
+      darkToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Mobile Menu
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('hidden');
+      });
+      document.getElementById('closeMenu').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.add('hidden');
+      });
+
+      // Search Overlay
+      document.getElementById('searchToggle').addEventListener('click', () => {
+        document.getElementById('searchOverlay').classList.remove('hidden');
+      });
+      document.getElementById('closeSearch').addEventListener('click', () => {
+        document.getElementById('searchOverlay').classList.add('hidden');
+      });
+    </script>
+  </body>
+</html>

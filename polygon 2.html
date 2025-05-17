@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart-Lab Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .polygon-bg {
+        clip-path: polygon(0 0, 0 100%, 100% 0);
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <section class="relative min-h-screen bg-cover bg-center" style="background-image: url('shape1.jpg'); background-color: #111;">
+      <!-- Polygon Background -->
+      <div class="absolute inset-0 polygon-bg bg-white bg-opacity-90 backdrop-blur-sm z-0"></div>
+
+      <!-- Content Overlay -->
+      <div class="relative z-10 px-4 sm:px-6 md:px-16 py-12 sm:py-20 flex items-center min-h-screen">
+        <div class="max-w-xl text-gray-800">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            Sprint to Scale<br />
+            <span class="text-orange-600">with Smart-Lab Global</span>
+          </h1>
+          <ul class="mt-6 text-gray-700 text-base sm:text-lg space-y-2">
+            <li>• We don’t just keep up with change — we drive it forward, fearlessly.</li>
+            <li>• From complexity to clarity — we power the journey of transformation.</li>
+            <li>• At the core of every breakthrough: bold thinking and trusted execution.</li>
+            <li>• Technology is built around people. Progress is designed around you.</li>
+          </ul>
+          <p class="mt-4 text-gray-800 text-base sm:text-lg">
+            Turn ideas into impact across industries and borders.
+          </p>
+          <a
+            href="#"
+            class="mt-6 inline-block px-6 py-3 bg-gray-900 text-white text-sm font-semibold rounded-full shadow hover:bg-gray-800 transition"
+          >
+            Meet Smart-Lab Global
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
