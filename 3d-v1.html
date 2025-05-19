@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive 3D Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper {
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 280px;
+        height: 380px;
+        display: flex;
+        align-items: flex-end;
+        color: white;
+        padding: 20px;
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold mb-10 text-gray-800">Case Studies</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 8 Slide Items -->
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div>
+              <h3 class="text-lg font-semibold">Slide 1</h3>
+              <a href="#" class="text-orange-500 text-sm mt-2 inline-block">View Details →</a>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 2</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 3</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 4</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 5</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 6</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 7</h3></div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('3d.jpg')">
+            <div><h3 class="text-lg font-semibold">Slide 8</h3></div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-6"></div>
+
+        <!-- Navigation -->
+        <div class="flex justify-end gap-4 mt-4">
+          <div class="swiper-button-prev border rounded-full w-10 h-10 flex items-center justify-center"></div>
+          <div class="swiper-button-next border border-orange-500 text-orange-500 rounded-full w-10 h-10 flex items-center justify-center"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Init Swiper -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -17,10 +17,99 @@ clip-path: polygon(0 0, 0 100%, 100% 0);
   }
 }
 
+     .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+
     </style>
   </head>
   <body>
-    <section class="relative w-full lg:h-[620px] xl:h-[730px] sm:h-[700px] bg-cover bg-center" style="background-image: url('shape1.jpg'); background-color: #111;">
+
+  
+    <!-- Carousel Section -->
+  <section class="w-full px-4 py-8 max-w-7xl mx-auto relative">
+    <!-- Header and Controls -->
+    <div class="flex justify-between items-center mb-4">
+      <button class="bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800">
+        Explore Our Services
+      </button>
+      <div class="flex gap-2">
+        <button id="scrollLeft" class="w-9 h-9 border rounded-full flex items-center justify-center hover:bg-gray-200">
+          <span>&larr;</span>
+        </button>
+        <button id="scrollRight" class="w-9 h-9 border rounded-full flex items-center justify-center hover:bg-gray-200">
+          <span>&rarr;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div id="carousel" class="flex flex-nowrap snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-hide space-x-4">
+      <!-- Carousel Items -->
+      <!-- Repeat as needed -->
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">
+          Cyber Security
+        </div>
+      </div>
+      <!-- Duplicate and change title/text/image as needed -->
+      <!-- Example clones -->
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">AI & Automation</div>
+      </div>
+
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">AR / VR</div>
+      </div>
+
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">App Development</div>
+      </div>
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">AGTdspp Development</div>
+      </div>
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">sdfs Development</div>
+      </div>
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">Gte Development</div>
+      </div>
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">Herr Development</div>
+      </div>
+      <div class="snap-start min-w-[80vw] sm:min-w-[48%] md:min-w-[30%] xl:min-w-[16%] flex-shrink-0 relative rounded-lg overflow-hidden shadow">
+        <img src="side1.jpg" class="w-full h-40 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="absolute top-4 left-4 text-white text-sm font-semibold z-10">Fde Development</div>
+      </div>
+
+      <!-- Add more items here -->
+    </div>
+  </section>
+
+
+    <section class="relative w-full h-[800px]  xl:h-[730px] lg:h-[620px] sm:h-[700px] bg-cover bg-center" style="background-image: url('shape1.jpg'); background-color: #111;">
       <!-- Polygon Overlay with Text -->
       <div class="polygon-left bg-white bg-opacity-90 backdrop-blur-sm max-w-full h-full flex flex-col">
         <div class="w-full max-w-7xl mx-auto px-6 sm:py-10 xl:py-20 md:py-2 sm:px-6">
@@ -29,7 +118,7 @@ clip-path: polygon(0 0, 0 100%, 100% 0);
               Lorem to Lipsum<br />
               <span class="text-orange-600">This is paragraph summary</span>
             </h1>
-            <ul class="mt-6 text-gray-700 text-[17[px] sm:text-[12px] space-y-2">
+            <ul class="mt-6 text-gray-700 text-[17[px] space-y-2">
               <li>We don’t just keep up with change — we drive it forward, fearlessly.</li>
               <li>From complexity to clarity — we power the journey of transformation.</li>
               <li>At the core of every breakthrough: bold thinking and trusted execution.</li>
@@ -45,5 +134,54 @@ clip-path: polygon(0 0, 0 100%, 100% 0);
           </div>
       </div>
     </section>
+
+
+   <script>
+  const carousel = document.getElementById('carousel');
+  const items = carousel.querySelectorAll('.snap-start');
+
+  function getVisibleItems() {
+    const width = window.innerWidth;
+    if (width < 640) return 2;       // Mobile
+    if (width < 1024) return 3;      // Tablet
+    if (width < 1280) return 4;      // Small desktop
+    return 6;                        // Large screen
+  }
+
+  let visibleItems = getVisibleItems();
+  let itemWidth = items[0].offsetWidth + 16; // Include margin (space-x-4)
+
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    visibleItems = getVisibleItems();
+    itemWidth = items[0].offsetWidth + 16;
+  });
+
+  let currentIndex = 0;
+
+  function scrollToItem(index) {
+    carousel.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
+  }
+
+  document.getElementById('scrollLeft').addEventListener('click', () => {
+    currentIndex = Math.max(0, currentIndex - visibleItems);
+    scrollToItem(currentIndex);
+  });
+
+  document.getElementById('scrollRight').addEventListener('click', () => {
+    currentIndex = Math.min(items.length - visibleItems, currentIndex + visibleItems);
+    scrollToItem(currentIndex);
+  });
+
+  // Auto-scroll every 4s
+  setInterval(() => {
+    currentIndex = (currentIndex + visibleItems) % items.length;
+    scrollToItem(currentIndex);
+  }, 4000);
+</script>
+
+
+
+
   </body>
 </html>
