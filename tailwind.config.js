@@ -29,6 +29,12 @@ module.exports = {
       'huge': '100px' // Super large font size
     }
   },
+  
+  extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+  },
 
   plugins: [],
 };
