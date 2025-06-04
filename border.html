@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind CSS Divider Examples</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-8 space-y-12">
+
+  <!-- 1. Basic Horizontal Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <p>Above divider</p>
+    <hr class="border-t border-gray-300 my-4" />
+    <p>Below divider</p>
+  </div>
+
+  <!-- 2. Text-Centered Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <div class="flex items-center">
+      <div class="flex-grow border-t border-gray-300"></div>
+      <span class="px-4 text-sm text-gray-500">OR</span>
+      <div class="flex-grow border-t border-gray-300"></div>
+    </div>
+  </div>
+
+  <!-- 3. Vertical Divider -->
+  <div class="bg-white p-6 rounded shadow flex space-x-4 items-center justify-center">
+    <div class="text-gray-700">Left</div>
+    <div class="border-l border-gray-300 h-6"></div>
+    <div class="text-gray-700">Right</div>
+  </div>
+
+  <!-- 4. Dashed Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <p>Before</p>
+    <hr class="border-t-2 border-dashed border-gray-400 my-4" />
+    <p>After</p>
+  </div>
+
+  <!-- 5. Double Line Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <p>Header</p>
+    <hr class="border-t-4 border-gray-500 my-4" />
+    <p>Body</p>
+  </div>
+
+  <!-- 6. Divider with Icon -->
+  <div class="bg-white p-6 rounded shadow">
+    <div class="flex items-center text-gray-400">
+      <div class="flex-grow border-t border-gray-300"></div>
+      <span class="px-4">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 4v16m8-8H4" />
+        </svg>
+      </span>
+      <div class="flex-grow border-t border-gray-300"></div>
+    </div>
+  </div>
+
+  <!-- 7. Gradient Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <p>Top Section</p>
+    <hr class="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-0 rounded my-4" />
+    <p>Bottom Section</p>
+  </div>
+
+  <!-- 8. Divider Inside Card -->
+  <div class="bg-white p-6 rounded shadow max-w-md mx-auto">
+    <h2 class="text-xl font-bold">Card Title</h2>
+    <p class="text-gray-600">This is the top section.</p>
+    <hr class="my-4 border-gray-300" />
+    <p class="text-gray-600">This is the bottom section.</p>
+  </div>
+
+  <!-- 9. Label Left-Aligned Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <div class="flex items-center">
+      <span class="text-sm text-gray-500 mr-4">Section Title</span>
+      <div class="flex-grow border-t border-gray-300"></div>
+    </div>
+  </div>
+
+  <!-- 10. Custom Width Divider -->
+  <div class="bg-white p-6 rounded shadow">
+    <p class="mb-4 text-center">Half Width Divider</p>
+    <hr class="w-1/2 mx-auto border-t-2 border-gray-500" />
+  </div>
+
+  <!-- 11. Divider with Background Overlay Style -->
+  <div class="bg-gray-800 text-white p-6 rounded shadow">
+    <p>Dark background section</p>
+    <hr class="border-t-2 border-white/10 my-4" />
+    <p>Another section below</p>
+  </div>
+
+  <!-- 12. Vertical Divider Full Height -->
+  <div class="flex h-32 w-full bg-white rounded shadow overflow-hidden">
+    <div class="w-1/2 flex items-center justify-center">Left</div>
+    <div class="w-px bg-gray-300"></div>
+    <div class="w-1/2 flex items-center justify-center">Right</div>
+  </div>
+
+  <div class="relative bg-blue-500 text-white p-8">
+  <h2 class="text-xl font-bold">Wave Divider Example</h2>
+  <p>This section has a nice top wave divider.</p>
+  <svg class="absolute top-0 left-0 w-full" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M0,64L1440,0L1440,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+<div class="relative bg-green-400 text-white p-8">
+  <h2 class="text-xl font-bold">Bottom Wave</h2>
+  <p>This section ends with a wave effect.</p>
+  <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M0,0L1440,64L1440,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+
+<div class="flex items-center my-8">
+  <div class="flex-grow h-px bg-gradient-to-r from-blue-400 via-pink-500 to-red-500"></div>
+  <span class="px-4 text-sm text-gray-600 font-medium">Continue</span>
+  <div class="flex-grow h-px bg-gradient-to-r from-red-500 via-pink-500 to-blue-400"></div>
+</div>
+
+
+<div class="bg-white p-6 rounded shadow">
+  <p>Visible content</p>
+  <hr class="hidden sm:block my-4 border-gray-300" />
+  <p class="text-gray-600">This divider only shows on sm+ screens</p>
+</div>
+
+
+
+<hr class="border-t-2 border-dotted border-gray-500 my-6" />
+
+
+<style>
+  .glow-divider {
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+</style>
+
+<hr class="h-1 bg-purple-500 glow-divider border-none rounded my-6" />
+
+
+
+<div class="relative bg-indigo-600 text-white p-8">
+  <h2 class="text-xl font-bold">Diagonal Divider</h2>
+  <p>This uses an angled SVG shape.</p>
+  <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M0,160L1440,80L1440,160L0,160Z"></path>
+  </svg>
+</div>
+
+
+<div class="flex items-center my-8">
+  <div class="flex-grow border-t border-gray-300"></div>
+  <div class="mx-4 rounded-full border border-gray-300 p-2 bg-white">
+    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M12 4v16m8-8H4" />
+    </svg>
+  </div>
+  <div class="flex-grow border-t border-gray-300"></div>
+</div>
+
+
+<div class="flex items-center my-6">
+  <span class="text-sm text-gray-600 font-medium">Overview</span>
+  <div class="ml-4 flex-grow border-t border-gray-300"></div>
+</div>
+
+
+<svg class="w-full h-6 text-gray-300" preserveAspectRatio="none" viewBox="0 0 1200 120">
+  <path d="M0 0 L600 120 L1200 0 V120 H0 Z" fill="currentColor"></path>
+</svg>
+<svg class="w-full h-12" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <polygon points="0,100 50,0 100,100" class="fill-gray-300"></polygon>
+</svg>
+
+<div class="grid grid-cols-3 items-center text-center">
+  <div>Item 1</div>
+  <div class="border-l border-dashed border-gray-400 h-12 mx-auto"></div>
+  <div>Item 2</div>
+</div>
+
+
+<div class="flex gap-6 items-start">
+  <div class="bg-white p-4 rounded shadow w-1/2">Card 1</div>
+  <div class="w-px bg-gray-300 h-auto"></div>
+  <div class="bg-white p-4 rounded shadow w-1/2">Card 2</div>
+</div>
+
+
+<div class="border-t-4 border-blue-600 pt-4">
+  <h3 class="text-lg font-bold">Active Tab Content</h3>
+</div>
+
+
+<svg class="w-full h-2" viewBox="0 0 100 10" preserveAspectRatio="none">
+  <circle cx="5" cy="5" r="1" fill="gray" />
+  <circle cx="15" cy="5" r="1" fill="gray" />
+  <circle cx="25" cy="5" r="1" fill="gray" />
+  <circle cx="35" cy="5" r="1" fill="gray" />
+  <circle cx="45" cy="5" r="1" fill="gray" />
+</svg>
+
+
+<div class="space-y-4 divide-y divide-gray-200">
+  <div class="py-2">What is Tailwind?</div>
+  <div class="py-2">How do I install it?</div>
+  <div class="py-2">Is it free?</div>
+</div>
+
+
+<hr class="h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-70 my-6 rounded" />
+
+
+<div class="flex items-center gap-4 my-6">
+  <div class="flex-grow border-t border-gray-300"></div>
+  <span class="bg-gray-100 text-gray-600 px-4 py-1 rounded-full text-xs">New</span>
+  <div class="flex-grow border-t border-gray-300"></div>
+</div>
+
+
+<div class="flex items-center gap-3 my-6 text-gray-500">
+  <div class="flex-grow border-t border-gray-300"></div>
+  <span class="flex items-center gap-1 text-sm">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M12 4v16m8-8H4" />
+    </svg>
+    Divider
+  </span>
+  <div class="flex-grow border-t border-gray-300"></div>
+</div>
+
+
+<div class="my-6">
+  <div class="block sm:hidden border-t border-gray-400"></div>
+  <div class="hidden sm:block border-t-2 border-blue-400"></div>
+</div>
+
+
+<div class="bg-white p-4 rounded shadow max-w-sm mx-auto">
+  <h4 class="text-lg font-semibold">Title</h4>
+  <p class="text-sm">Some content here...</p>
+  <hr class="my-4 mx-2 border-t border-gray-300" />
+  <p class="text-sm">More content below divider</p>
+</div>
+
+
+<div class="flex items-center space-x-4 h-16">
+  <div class="text-center">Left</div>
+  <div class="flex flex-col items-center text-gray-400">
+    <div class="flex-grow w-px bg-gray-300"></div>
+    <svg class="w-4 h-4 my-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M12 4v16m8-8H4" />
+    </svg>
+    <div class="flex-grow w-px bg-gray-300"></div>
+  </div>
+  <div class="text-center">Right</div>
+</div>
+
+
+<div class="fixed bottom-0 left-0 w-full border-t border-gray-300 bg-white p-2 text-center text-sm text-gray-500">
+  This is a sticky bottom divider.
+</div>
+
+
+</body>
+</html>
